@@ -11,4 +11,5 @@ $routes->get('namacontroller/create', 'NamaController::create');
 $routes->post('namacontroller/store', 'NamaController::store');
 $routes->get('namacontroller/edit/(:num)', 'NamaController::edit/$1');
 $routes->post('namacontroller/update/(:num)', 'NamaController::update/$1');
+$routes->get('namacontroller/delete/index/(:num)', 'NamaController::deleteIndex/$1');
 $routes->get('namacontroller/delete/(:num)', 'NamaController::delete/$1');

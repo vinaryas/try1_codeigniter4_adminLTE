@@ -41,15 +41,14 @@
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
             <!-- Content Header (Page header) -->
-            <div class="content-header">
+            <section class="content-header">
                 <div class="container-fluid">
-                    <div class="row mb-2">
-                        <div class="col-sm-6">
-                            <h1 class="m-0">Create Data</h1>
-                        </div>
+                    <div class="row justify-content-between align-items-center">
+                        <h1 class="m-0">Create Data</h1>
+                        <a href="<?= base_url(); ?>" class="btn btn-info">Kembali ke Halaman Home</a>
                     </div>
                 </div>
-            </div>
+            </section>
 
             <!-- Main content -->
             <section class="content">
@@ -81,8 +80,8 @@
                                 <td><?= $row['nama']; ?></td>
                                 <td><?= $row['deskripsi']; ?></td>
                                 <td>
-                                    <a href="<?= base_url('namacontroller/edit/' . $row['id']); ?>">Edit</a>
-                                    <a href="<?= base_url('namacontroller/delete/' . $row['id']); ?>">Hapus</a>
+                                    <a href="<?= base_url('namacontroller/edit/' . $row['id']); ?>" class="btn btn-warning">Edit</a>
+                                    <a href="<?= base_url('namacontroller/delete/index/' . $row['id']); ?>" class="btn btn-danger">Hapus</a>
                                 </td>
                             </tr>
                         <?php endforeach; ?>

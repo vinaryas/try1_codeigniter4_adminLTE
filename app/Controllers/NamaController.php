@@ -55,6 +55,12 @@ class NamaController extends BaseController
         return redirect()->to(base_url('namacontroller'));
     }
 
+    public function deleteIndex($id)
+{
+    $data['row'] = $this->namaModel->find($id);
+    return view('nama_tabel/delete', $data);
+}
+
     public function delete($id)
     {
         $this->namaModel->delete($id);
